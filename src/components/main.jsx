@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 // search for every .env file in the project
 dotenv.config();
 
-const GOOGLE_MAPS_API_KEY = "AIzaSyC-fQVkm2xukA79CIzMFoTWK_4sl8rGFqc";
+const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY;
 const Main = () => {
   const [state, setState] = useState({
     latitude: 3.451647,
