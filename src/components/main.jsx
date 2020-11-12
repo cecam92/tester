@@ -1,11 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
-import dotenv from "dotenv";
+const dotenv = require("dotenv");
 
 // search for every .env file in the project
 dotenv.config();
 
-const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY;
+const API_KEY = process.env.REACT_APP_API_KEY;
+console.log(API_KEY);
 const Main = () => {
   const [state, setState] = useState({
     latitude: 3.451647,
@@ -19,7 +20,7 @@ const Main = () => {
 
   const datos = async (lat, lgn) => {
     setApi(
-      `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lgn}&key=${GOOGLE_MAPS_API_KEY}`
+      `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lgn}&key=${API_KEY}`
     );
     await fetch(api)
       .then((response) => response.json())
