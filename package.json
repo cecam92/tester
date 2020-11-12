@@ -2,7 +2,7 @@
   "name": "tester",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cecam92.github.io/tester",
+  "homepage": "https://cecam92.github.io/tester/",
   "dependencies": {
     "@googlemaps/google-maps-services-js": "^3.1.13",
     "@testing-library/jest-dom": "^5.11.4",
@@ -21,7 +21,6 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-
   },
   "eslintConfig": {
     "extends": [
@@ -43,7 +42,9 @@
   },
   "description": "aplication for multiple testing technologies",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  },
   "author": "",
   "license": "ISC",
   "keywords": []
